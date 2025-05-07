@@ -18,3 +18,4 @@ def predecir():
 
 if __name__ == '__main__':
     app.run(debug=True)
+#verificar modelo 

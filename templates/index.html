@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Predicción de Tráfico variante Zipaquirá</title>
+</head>
+<body>
+    <h1>Modelo de predicción para tráfico en la variante Zipaquirá</h1>
+    <form method="POST" action="/predecir">
+        Hora (0-23): <input type="number" name="hora" min="0" max="23" required><br>
+        Día de la semana (0=lunes, 6=domingo): <input type="number" name="dia_semana" min="0" max="6" required><br>
+        <input type="submit" value="Predecir">
+    </form>
+    {% if resultado is not none %}
+        <h2>Predicción: {{ resultado }} / 10</h2>
+    {% endif %}
+</body>
+</html>

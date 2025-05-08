@@ -1,0 +1,12 @@
+hora,dia,clima,eventos,trafico
+8,Lunes,soleado,ninguno,4
+9,Lunes,lluvioso,accidente,7
+17,Martes,lluvioso,concierto,9
+12,Miércoles,nublado,ninguno,5
+18,Miércoles,lluvioso,accidente,8
+7,Jueves,soleado,ninguno,3
+16,Viernes,nublado,concierto,8
+10,Sábado,lluvioso,ninguno,6
+20,Domingo,nublado,evento_deportivo,9
+15,Lunes,soleado,ninguno,5
+

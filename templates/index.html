@@ -5,13 +5,28 @@
 </head>
 <body>
     <h1>Modelo de predicción para tráfico en la variante Zipaquirá</h1>
+    <h1>🧜🏽‍♀️</h1>
     <form method="POST" action="/predecir">
         Hora (0-23): <input type="number" name="hora" min="0" max="23" required><br>
-        Día de la semana (0=lunes, 6=domingo): <input type="number" name="dia_semana" min="0" max="6" required><br>
+        
+        <!-- Campo de selección de día -->
+        Día de la semana: 
+        <select name="dia_semana" required>
+            <option value="Lunes">Lunes</option>
+            <option value="Martes">Martes</option>
+            <option value="Miércoles">Miércoles</option>
+            <option value="Jueves">Jueves</option>
+            <option value="Viernes">Viernes</option>
+            <option value="Sábado">Sábado</option>
+            <option value="Domingo">Domingo</option>
+        </select><br>
+        
         <input type="submit" value="Predecir">
     </form>
+    
     {% if resultado is not none %}
         <h2>Predicción: {{ resultado }} / 10</h2>
     {% endif %}
 </body>
 </html>
+

@@ -16,3 +16,4 @@ modelo = RandomForestRegressor(n_estimators=100, random_state=42)
 modelo.fit(X_train, y_train)
 
 joblib.dump(modelo, 'modelo_trafico.pkl')
+#corregido

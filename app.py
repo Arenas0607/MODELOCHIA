@@ -24,5 +24,5 @@ def predecir():
     except Exception as e:
         return f"Error en la predicción: {str(e)}"
 
-#verificar dias modelo no funcional en html
+#
 #verificar modelo corroborar datos 

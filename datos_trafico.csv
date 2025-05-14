@@ -15,3 +15,5 @@ hora,dia,clima,eventos,trafico
 2,Sábado,nublado,accidente,1
 7,Sábado,soleado,obras,3
 9,Sábado,soleado,obras,6
+9,lunes,nublado,ninguno,10
+16,Martes,soleado,accidente,9

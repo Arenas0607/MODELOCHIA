@@ -2,15 +2,81 @@
 <html>
 <head>
     <title>Predicción de Tráfico variante Zipaquirá</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: sans-serif;
+        }
+        h1, h2 {
+            color: white;
+            text-align: center;
+        }
+        .welcome-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        form {
+            text-align: left; 
+        }
+        label {
+            display: inline-block; 
+            width: 150px; 
+            text-align: right; 
+            margin-left: 10px; 
+        }
+        input[type="number"], select {
+            background-color: purple;
+            color: white;
+            border: 1px solid darkviolet;
+            padding: 8px;
+            border-radius: 5px;
+            font-size: 1em;
+            width: 150px; 
+        }
+        option {
+            background-color: purple;
+            color: white;
+        }
+        input[type="submit"] {
+            background-color: purple;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            margin-right: auto;
+            display: block; 
+            text-align: center; 
+        }
+        input[type="submit"]:hover {
+            background-color: darkviolet;
+        }
+        .prediction-result {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .wizard {
+            text-align: left; /
+        }
+    </style>
 </head>
 <body>
-    <h1>Modelo de predicción para tráfico en la variante Zipaquirá</h1>
-    <h1>🧙🧞‍♂️</h1>
-    <form method="POST" action="/predecir">
-        Hora (0-23): <input type="number" name="hora" min="0" max="23" required><br>
-        
+    <div class="welcome-container">
+        <h1>¡Bienvenidos!</h1>
+        <p>Por favor, indicanos la hora y el día de la semana que deseas predecir.</p>
+    </div>
 
-        Día de la semana: 
+    <h1>Modelo de predicción para tráfico en la variante Zipaquirá</h1>
+
+    <form method="POST" action="/predecir">
+        <div class="wizard">🧙🧞‍♂️</div>
+        <label for="hora">Hora (0-23):</label>
+        <input type="number" name="hora" min="0" max="23" required><br><br>
+
+
+        <label for="dia_semana">Día de la semana:</label>
         <select name="dia_semana" required>
             <option value="Lunes">Lunes</option>
             <option value="Martes">Martes</option>
@@ -19,17 +85,19 @@
             <option value="Viernes">Viernes</option>
             <option value="Sábado">Sábado</option>
             <option value="Domingo">Domingo</option>
-        </select><br> 
-    
-        
+        </select><br><br>
+
+
         <input type="submit" value="Predecir">
     </form>
-    
-    {% if resultado is not none %}
-      <h1>🧙 el modelo predice que tendremos un trafico calificado </h1>
-        <h2>Predicción: {{ resultado }} / 10</h2>
-      
+
+    {% if request.args.get('resultado') %}
+      <div class="prediction-result">
+        <h1>🧙 el modelo predice que tendremos un trafico calificado </h1>
+        <h2>Predicción: {{ request.args.get('resultado') }} / 10</h2>
+      </div>
     {% endif %}
+
+   
 </body>
 </html>
-

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Objetivos y Evaluación Inicial</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      padding: 50px;
+    }
+
+    h1 {
+      font-size: 3em;
+    }
+
+    p {
+      font-size: 1.2em;
+      line-height: 1.6em;
+    }
+
+    strong {
+      font-weight: bold;
+    }
+
+    .boton-inicio {
+      position: absolute;
+      bottom: 30px;
+      right: 30px;
+      background-color: #7B3FA1;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1em;
+      border-radius: 4px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .boton-inicio:hover {
+      background-color: #9b4ed3;
+    }
+  </style>
+</head>
+<body>
+  <h1>Ingeniería de Datos</h1>
+  <p>
+    El inicial de los datos disponibles, su calidad y patrones temporales, así como la viabilidad del proyecto.
+  </p>
+  <p>
+    <strong>¿Qué buscamos lograr?</strong> Explicar cómo la predicción del tráfico puede ayudar a las empresas (puntualidad, calidad de vida de empleados) y potencialmente para marketing. 
+    Generar un modelo de machine learning usando el modelo Random Forest para que pueda analizar diferentes variables del tráfico.
+  </p>
+
+  <a href="{{ url_for('inicio') }}" class="boton-inicio">INICIO</a>
+</body>
+</html>
